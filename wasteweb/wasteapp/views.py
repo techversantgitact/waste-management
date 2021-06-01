@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render,redirect
+#from django.http import HttpResponse
 
 
 def index(request):
@@ -20,11 +20,11 @@ def contact(request):
 
 def login(request):
     context = {}
-    return render(request, 'wasteapp/login.html', context)
+    return render(request, 'wasteapp/signin.html', context)
 
-def registration(request):
+def signup(request):
     context = {}
-    return render(request, 'wasteapp/registration.html', context)
+    return render(request, 'wasteapp/signup.html',context)
     
 def logout(request):
     context = {}
